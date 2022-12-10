@@ -1,13 +1,12 @@
 # Spring Data MongoDB reactive insertion
 
-This simple Spring Boot reactive application shows how to efficiently insert a `Flux` of items into MongoD.   
+This simple Spring Boot reactive application shows how to efficiently insert a `Flux` of items into MongoDB.   
 
 ## Usage
 
 First configure the MongoDB URL in `src/main/resources/application.properties`.
 
 Then run the application with `mvn spring-boot:run` or using your IDE.
-`java -jar target/spring-graphql-sample.jar`).
 
 Then use the application URLs:
 - http://localhost:8080/count-items counts the items in the database
