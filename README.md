@@ -1,5 +1,7 @@
 # Spring Data MongoDB reactive insertion
 
+This repository is a sample application for my [Spring Data MongoDB reactive performance tip](https://www.adeliosys.fr/articles/spring-data-mongo-reactive-performance-tip/) article.
+
 This simple Spring Boot reactive application shows how to efficiently insert a `Flux` of items into MongoDB.   
 
 ## Usage
