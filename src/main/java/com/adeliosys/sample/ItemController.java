@@ -26,7 +26,7 @@ public class ItemController {
     @GetMapping("/insert-items")
     public Mono<Void> insert(
             @RequestParam(required = false) boolean optimized,
-            @RequestParam(required = false, defaultValue = "6") int count,
+            @RequestParam(required = false, defaultValue = "5") int count,
             @RequestParam(required = false, defaultValue = "3") int batchSize) {
         // First generate a flux of items
         Flux<Item> items = Flux.fromStream(IntStream.range(0, count).mapToObj(i -> new Item()));
@@ -44,7 +44,7 @@ public class ItemController {
      */
     @GetMapping("/blocking-insert-items")
     public void blockingInsert(
-            @RequestParam(required = false, defaultValue = "6") int count,
+            @RequestParam(required = false, defaultValue = "5") int count,
             @RequestParam(required = false, defaultValue = "3") int batchSize) {
         for (int batch = 0; batch < count / batchSize; batch++) {
             List<Item> items = IntStream.range(0, batchSize).mapToObj(i -> new Item()).collect(Collectors.toList());
